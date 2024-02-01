@@ -11,13 +11,12 @@ public class RewardValue {
     public RewardValue(double milesValue, boolean isMiles) {
         if (isMiles) {
             this.milesValue = milesValue;
-            this.cashValue = milesValue / 0.0035; // Reverse conversion
+            this.cashValue = milesValue / 0.0035;
         } else {
             throw new IllegalArgumentException("Invalid constructor usage");
         }
     }
 
-    // Get the cash value of the RewardValue
     public double getCashValue() {
         return cashValue;
     }
